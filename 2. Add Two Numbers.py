@@ -8,18 +8,37 @@ Output: 7 -> 0 -> 8
 
 """
 
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+class Node(object):
+
+    def __init__ (self, d, n = None):
+        self.data = d
+        self.next_node = n
+
+    def get_next (self):
+        return self.next_node
+
+    def set_next (self, n):
+        self.next_node = n
+
+    def get_data (self):
+        return self.data
+
+    def set_data (self, d):
+        self.data = d
 
 class Solution(object):
-    def addTwoNumbers(self, l1, l2):
-        """
-        :type l1: ListNode
-        :type l2: ListNode
-        :rtype: ListNode
-   """
 
 
+    def __init__(self, r=None):
+        self.root = r
+        self.size = 0
+
+    def find(self, d):
+        this_node = self.root
+        while this_node:
+            size = size +1
+
+    def addTwoNumbers (self, l1,l2):
+        this_node = l1.root
+        while this_node:
+            print this_node.get_data()
