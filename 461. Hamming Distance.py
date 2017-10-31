@@ -29,8 +29,6 @@ class Solution(object):
         i = 0
         a = '{0:b}'.format(x)
         b = '{0:b}'.format(y)
-        print a
-        print b
         lenA = len(a)
         lenB = len(b)
         if lenA>lenB:
