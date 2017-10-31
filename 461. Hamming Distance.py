@@ -36,7 +36,6 @@ class Solution(object):
             while(lenA>=lenB and lenB != 0):
                 if a[lenA-1]!=b[lenB-1]:
                     count = count +1
-
                 lenA = lenA -1
                 lenB = lenB -1
 
