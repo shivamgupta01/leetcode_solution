@@ -17,6 +17,10 @@ class Solution(object):
         countL = 0
         countU = 0
 
+        if len(moves) == 0:
+            return True
+        if len(moves) %2 !=0:
+            return False
         while i<len(moves):
             if moves[i] == 'L':
                 countL = countL + 1
