@@ -26,30 +26,53 @@
 class Solution(object):
     def hammingDistance(self, x, y):
         count = 0
+        i = 0
         a = '{0:b}'.format(x)
         b = '{0:b}'.format(y)
+        print a
+        print b
         lenA = len(a)
         lenB = len(b)
-
         if lenA>lenB:
-            while(lenA!=lenB):
-                b = '0' + b
-                lebB = lenB + 1
-        else:
-            while (lenA != lenB):
-                a = '0' + a
-                lenA = lenA + 1
+            counter = lenA - lenB
+            while(lenA>=lenB and lenB != 0):
+                if a[lenA-1]!=b[lenB-1]:
+                    count = count +1
 
-        result = int(a) + int(b)
-        result = str('{0:0100d}'.format(result))
-        i =0
-        while(i<len(result)):
-            if int(result[i]) % 2 == 1:
-                count = count + 1
-            i=i+1
+                lenA = lenA -1
+                lenB = lenB -1
+
+            while (lenA>0):
+                if int(a[lenA-1]) ==0:
+                    counter = counter -1
+                lenA = lenA -1
+            count = int(count) + int(counter)
+
+        elif lenB>lenA:
+            counter = lenB - lenA
+            while(lenB>=lenA and lenA != 0):
+                if a[lenA-1]!=b[lenB-1]:
+                    count = count +1
+                lenB = lenB - 1
+                lenA = lenA - 1
+
+            while (lenB>0):
+                if int(b[lenB-1]) ==0:
+                    counter = counter -1
+                lenB = lenB -1
+            count = int(count) + int(counter)
+
+        else:
+            result = int(a) + int(b)
+            result = str('{0:d}'.format(result))
+            while(i<len(result)):
+                if int(result[i]) % 2 == 1:
+                    count = count + 1
+                i=i+1
+
         return count
 
 
 if __name__ == '__main__':
     s= Solution()
-    print "The Hamming Distance between numbers are: " + str(s.hammingDistance(1,1727613287))
+    print "The Hamming Distance between numbers are: " + str(s.hammingDistance(1,4))
