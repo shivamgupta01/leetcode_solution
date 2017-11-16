@@ -16,12 +16,13 @@ class Solution(object):
         i = 0
         countL = 0
         countU = 0
+        length = len(moves)
 
-        if len(moves) == 0:
+        if length == 0:
             return True
-        if len(moves) %2 !=0:
+        if length %2 !=0:
             return False
-        while i<len(moves):
+        while i<length:
             if moves[i] == 'L':
                 countL = countL + 1
             elif  moves[i] == 'R':
@@ -31,10 +32,10 @@ class Solution(object):
             else:
                 countU = countU -1
             i = i + 1
-        if (countU == countL == 0 or countL  == countU):
+        if (countL  == countU or countU == countL == 0):
             return True
         return False
 
 if __name__ == '__main__':
     s= Solution()
-    print "The Hamming Distance between numbers are: " + str(s.judgeCircle('DURDLDRRLL'))
+    print "If the Robot is back to position " + str(s.judgeCircle('DURDLDRRLL'))
