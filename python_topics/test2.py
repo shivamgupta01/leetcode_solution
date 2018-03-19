@@ -1,5 +1,7 @@
-a = [[1,2],[3,4]]
-for i in a:
-    for x in i:
-        print x
+d=[]
+d.append(1)
+d.append(2)
+d.append(3)
 
+print d
+print d[-2]
