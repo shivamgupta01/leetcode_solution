@@ -1,7 +1,4 @@
-d=[]
-d.append(1)
-d.append(2)
-d.append(3)
+a = 10
 
-print d
-print d[-2]
+if a / 0 and a!=10  :
+    print "hey got it"

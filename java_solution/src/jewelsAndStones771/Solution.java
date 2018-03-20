@@ -21,11 +21,48 @@ package jewelsAndStones771;
 //        The characters in J are distinct.
 
 
+import java.util.HashMap;
 
 public class Solution {
 
     public static void main(String[] args) {
-        System.out.println("Hello");
-    }
 
+        Solution solution = new Solution();
+        System.out.println(solution.numJewelsInStones("aA","aAAbbbb"));
+
+            }
+
+
+
+
+    public int numJewelsInStones(String J,String S) {
+
+        HashMap<Character, Integer> jewel = new HashMap<Character, Integer>();
+        int noOfStones = 0;
+
+        for (int i = 0; i < S.length(); i++) {
+            if (jewel.containsKey(S.charAt(i))) {
+                jewel.put(S.charAt(i), jewel.get(S.charAt(i)) + 1);
+            } else {
+                jewel.put(S.charAt(i), 1);
+            }
+        }
+
+
+        for (int i = 0; i < J.length(); i++) {
+//            if (jewel.containsKey(J.charAt(i))) {
+//
+//                noOfStones = noOfStones + jewel.get(J.charAt(i));
+//
+//            }
+                    try{        noOfStones = noOfStones + jewel.get(J.charAt(i));}
+                    catch (Exception e){noOfStones = noOfStones;}
+
+
+        }
+            return noOfStones;
+
+
+
+    }
 }
