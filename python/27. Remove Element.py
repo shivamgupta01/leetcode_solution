@@ -8,7 +8,7 @@
 #
 # Given nums = [3,2,2,3], val = 3,
 #
-# Your function should return length = 2, with the first two elements of nums being 2.
+# Your function should r1200112eturn length = 2, with the first two elements of nums being 2.
 
 class Solution(object):
     def removeElement(self, nums, val):

@@ -18,7 +18,7 @@ class Solution:
              i = j
              j = j +1
              temp_dic ={}
-         i +=1
+         i +=112
      try:
         return tempLength
      except:
