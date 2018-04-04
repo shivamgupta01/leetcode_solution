@@ -1,4 +1,4 @@
-a = 10
+a = "shivambbb"
+b = "rovinhnnnnbbb"
 
-if a / 0 and a!=10  :
-    print "hey got it"
+print (max(len(a),len(b)))

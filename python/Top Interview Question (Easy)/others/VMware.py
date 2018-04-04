@@ -2,8 +2,7 @@
 def minimumSet(firstList,secondList):
     i = 0
     d = []
-    firstList=sorted(firstList)
-    secondList = sorted(secondList)
+    firstList,secondList = zip(*sorted(zip(firstList,secondList)))
 
     d.append(secondList[0]-1)
     d.append(secondList[0])
@@ -21,13 +20,19 @@ def minimumSet(firstList,secondList):
                 reverseCounter = reverseCounter-1
 
         elif firstList[i+1]-secondList[i]>0:
-            d.append(secondList[i+1])
             d.append(secondList[i+1]-1)
+            d.append(secondList[i + 1])
 
         else:
-            d.append(secondList[i+1])
 
+            if d[-1] == firstList[i+1]:
+                d.append(secondList[i+1])
+
+            else:
+                d.append(secondList[i+1]-1)
+                d.append(secondList[i+1])
         i = i +1
+    print d
     return len(d)
 
 
@@ -35,5 +40,11 @@ def minimumSet(firstList,secondList):
 
 
 if __name__ == '__main__':
-    print "solution is : " + str(minimumSet([1,4,7,9]
-                                            ,[3,6,9,12]))
+    print("solution is : " + str(minimumSet([0, 4, 5, 10],
+                                            [4, 6, 9, 12])))
+
+#     [0,1,2,3,4]
+#             [4,5,6]
+#               [5,6,7,8,9]
+#                           [10,12]
+# [3,4,6,9,10]
