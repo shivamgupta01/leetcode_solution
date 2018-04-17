@@ -1,6 +1,4 @@
-package binarySearch;
-
-import java.util.List;
+package dataStructures.searchingAlgorithm.binarySearch;
 
 public class Solution {
     public static void main(String[] args) {

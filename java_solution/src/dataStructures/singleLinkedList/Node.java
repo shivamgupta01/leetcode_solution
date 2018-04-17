@@ -1,4 +1,4 @@
-package singleLinkedList;
+package dataStructures.singleLinkedList;
 
 public class Node {
     public int info;

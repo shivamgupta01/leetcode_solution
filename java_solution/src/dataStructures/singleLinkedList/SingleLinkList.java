@@ -1,9 +1,9 @@
-package singleLinkedList;
+package dataStructures.singleLinkedList;
 
 import java.util.Scanner;
 
 public class SingleLinkList {
-    private Node start;
+    public Node start;
 
     public SingleLinkList() {
         start = null;
@@ -244,8 +244,57 @@ public class SingleLinkList {
         start = prev;
     }
     public void sortTwoList(){
+    }
+    public void bubbleSortExData(){
+        Node p=start;
+        Node q=p.link;
+        Node end=null;
+        if (start==null){
+            System.out.println("Empty List cannot be sorted.");
+            return;
+        }
+        while (start.link!=end){
+            p=start;
+            while (p.link!=end){
+                q=p.link;
+                if(p.info>q.info){
+                    int temp = p.info;
+                    p.info = q.info;
+                    q.info = temp;
+                }
+                p = p.link;
+            }
+            end = q;
 
+        }
+    }
+    public void bubbleSortExNode(){
+        Node p=start;
+        Node r = null;
+        Node q=p.link;
+        Node end=null;
+        r.link = p;
+        if (start==null){
+            System.out.println("Empty List cannot be sorted.");
+            return;
+        }
+        while (start.link!=end){
+            p=start;
+            while (p.link!=end){
+                q=p.link;
+                if(p.info>q.info){
+                    p.link=q.link;
+                    r.link = q;
+                    q.link = p;
+                    p=q;
+                }
+                p = p.link;
 
+            }
+            end = q;
+
+        }
 
     }
+
 }
