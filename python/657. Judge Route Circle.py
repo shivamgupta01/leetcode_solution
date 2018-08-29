@@ -39,3 +39,4 @@ class Solution(object):
 if __name__ == '__main__':
     s= Solution()
     print "If the Robot is back to position " + str(s.judgeCircle('DURDLDRRLL'))
+
