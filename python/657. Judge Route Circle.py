@@ -32,7 +32,7 @@ class Solution(object):
             else:
                 countU = countU -1
             i = i + 1
-        if (countL  == countU or countU == countL == 0):
+        if countL  == countU or countU == countL == 0:
             return True
         return False
 
