@@ -21,11 +21,11 @@ class linked_list:
             cur = cur.next
         return total
 
-    def printListItems(self):
-        cur = self.head
-        while cur:
-            print cur.data
-            cur = cur.next
+    # def printListItems(self):
+    #     cur = self.head
+    #     while cur:
+    #         print cur.data
+    #         cur = cur.next
 
     def cycleLinkedList(self):
         cur = self.head

@@ -20,17 +20,28 @@
 
 class Solution(object):
     def reverse(self, x):
-        if x>=0:
-            if not(int(int("".join(list(str(x))[::-1])))>>32):
-                return int("".join(list(str((x)))[::-1]))
+        isNegative = False
+        reversed_num = 0
+        if x == 0:
+            return 0
+        elif x < 0:
+            isNegative = True
+            x = x * -1
+        while x>0:
+            reversed_num = reversed_num * 10 + x%10
+            x = int(x/10)
+        
+        if isNegative == False:
+            if reversed_num <= 2147483647:
+                return reversed_num
             else:
-                return x
+                return 0
         else:
-            if not(int(int("".join(list(str(abs(x)))[::-1]))*-1)>>32):
-                print int("".join(list(str(abs(x)))[::-1]))
-                return int("".join(list(str(abs(x)))[::-1]))*-1
+            if reversed_num <= 2147483648:
+                return -1 * reversed_num
             else:
-                return x
+                return 0
+
 
 
 
@@ -39,4 +50,4 @@ class Solution(object):
 
 if __name__ == '__main__':
     s=Solution()
-    print "Solution is : " + str(s.reverse(-321))
+    print("Solution is : " + str(s.reverse(-123))) 
