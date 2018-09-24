@@ -9,14 +9,16 @@
 
 class Solution(object):
     def rob(self, nums):
+        temp1 = 0
+        temp2 = 0
+        for i in range(len(nums)):
+            if i%2 == 0:
+                temp1 = max(temp1 + nums[i],temp2)
+            else:
+                temp2 = max(temp2 + nums[i],temp1)
 
-
-
-        return None
-
-
-
+        return max(temp1,temp2)
 if __name__ == '__main__':
     s = Solution()
-    print "Solution is :" + str(s.rob([3,2,3,4,3,2,1,3,4,5,6,5,4,3]))
+    print("Solution is :" + str(s.rob([3,2,3,4,3,2,1,3,4,5,6,5,4,3])))
 
