@@ -1,5 +1,7 @@
 package countAndSay38;
 
+import com.sun.org.apache.xerces.internal.dom.PSVIDOMImplementationImpl;
+
 class Solution {
     public String countAndSay(int n) {
         String prev = "1";
@@ -10,11 +12,11 @@ class Solution {
 
 
         }
+        
 
         return null;
 
     }
-
     public static void main(String[] args) {
         Solution solution = new Solution();
         System.out.println("The result is :" + solution.countAndSay(4));
