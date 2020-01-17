@@ -2,5 +2,12 @@
 2. Circular Rotaion ==> ["Rotate Array"]
 3. Bit Manipulation ==> ["Single Number"]
 4. Collection's Counter ==> ["Intersection of Two Arrays II"]
-5. Sub Region Calculator ==> sub_region = int(i/3)*3 + int(j/3)
-6.
+5. Valid Suduku :
+    Sub Region Calculator ==> sub_region = int(i/3)*3 + int(j/3)
+6. Rotate Array:
+   i. Transpose and Reverse
+   ii. Move 4 Rectangle.
+7. String to Integer (aToi) ==> Use re to simplify the code.
+8. Haystack and needle:
+    i. Rabin Karp: Constant Time Slice
+    ii. Bit Manipulation.
